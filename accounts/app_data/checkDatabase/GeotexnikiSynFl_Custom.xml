@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Views>
+  <View>
+    <Name>KinFlQry</Name>
+    <SQL>
+      ALTER TABLE SynFl ADD Geotexniki_PassWords1 varchar(255);
+    </SQL>
+    <DatabaseType>SQLServer</DatabaseType>
+  </View>
+  <!--Πρόσθετα passwords Μ.Ο.Δ και Υ.Π.Α.Α.Τ-->
+</Views>

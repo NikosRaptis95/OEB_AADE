@@ -1,0 +1,6 @@
+﻿SELECT        AitiKin, Cash, id, IdSyn, KoKiKin, Memo, RegistryDate, Seira, Status, Summary, SalesPerson
+FROM          KinFl
+UNION ALL
+(SELECT        AitiKin, Cash, id, IdSyn, SUBSTRING(KinFl.KoKiKin, 1, 1) + CAST(CAST(SUBSTRING(KinFl.KoKiKin, 2, 1) AS int) - 1 AS VARCHAR) AS KoKiKin, Memo, RegistryDate, Seira, Status, Summary, SalesPerson
+ FROM            KinFl
+ WHERE        KinFl.Cash = '1' AND KinFl.KoKiKin <> '00' AND KinFl.KoKiKin <> '02' AND KinFl.KoKiKin <> '10' AND KinFl.KoKiKin <> '12')

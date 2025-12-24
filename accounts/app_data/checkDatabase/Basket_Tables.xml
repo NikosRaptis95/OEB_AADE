@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Tables>
+  <!--Indexed 0=no index 1=Primary Key 2=Index No Dublicated 3=Index Dublicates-->
+  <Table>
+    <Name>Basket</Name>
+    <Basket_Field>
+      <Name>SynId</Name>
+      <DataType>nvarchar(60)</DataType>
+      <DatabaseType>SQlServer</DatabaseType>
+      <Indexed>1</Indexed>
+      <Default>''</Default>
+    </Basket_Field>
+    <Basket_Field>
+      <Name>SynId</Name>
+      <DataType>Text(60)</DataType>
+      <DatabaseType>MsAccess</DatabaseType>
+      <Indexed>1</Indexed>
+      <Default>''</Default>
+    </Basket_Field>
+    <Basket_Field>
+      <Name>SynDesc</Name>
+      <DataType>nvarchar(200)</DataType>
+      <DatabaseType>SQlServer</DatabaseType>
+      <Indexed>0</Indexed>
+      <Default>''</Default>
+    </Basket_Field>
+    <Basket_Field>
+      <Name>SynDesc</Name>
+      <DataType>Text(200)</DataType>
+      <DatabaseType>MsAccess</DatabaseType>
+      <Indexed>0</Indexed>
+      <Default>''</Default>
+    </Basket_Field>
+  </Table>
+</Tables>

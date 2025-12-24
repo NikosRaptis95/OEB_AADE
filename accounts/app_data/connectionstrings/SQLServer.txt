@@ -1,0 +1,3 @@
+﻿SQLServer
+SQLCLIENT
+server=localhost;Initial Catalog=megaorders;uid=sa;pwd=;

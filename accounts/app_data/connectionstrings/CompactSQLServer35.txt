@@ -1,0 +1,3 @@
+﻿Compact SQLServer 3.5
+SQLSERVERCE
+DataSource=app_data\database.sdf;

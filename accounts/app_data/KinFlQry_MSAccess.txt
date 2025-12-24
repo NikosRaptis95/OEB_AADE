@@ -1,0 +1,5 @@
+﻿SELECT KinFl.AitiKin, KinFl.Cash, KinFl.id, KinFl.IdSyn, KinFl.KoKiKin, KinFl.Memo, KinFl.RegistryDate, KinFl.Seira, KinFl.Status, KinFl.Summary, KinFl.SalesPerson
+FROM KinFl
+UNION ALL SELECT KinFl.AitiKin, KinFl.Cash, KinFl.id, KinFl.IdSyn, Mid(KinFl.KoKiKin,1,1) + Cstr(Val(Mid(KinFl.KoKiKin,2,1))-1) AS KoKiKin, KinFl.Memo, KinFl.RegistryDate, KinFl.Seira, KinFl.Status, KinFl.Summary, KinFl.SalesPerson
+FROM KinFl
+WHERE Cash = "1" And KinFl.KoKiKin <>"00" And KinFl.KoKiKin <>"02" And KinFl.KoKiKin <>"10" And KinFl.KoKiKin <>"12"

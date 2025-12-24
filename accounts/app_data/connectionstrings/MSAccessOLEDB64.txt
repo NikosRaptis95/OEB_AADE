@@ -1,0 +1,3 @@
+﻿MS Access OLEDB 64
+OLEDB
+Provider=Microsoft.ACE.OLEDB.12.0;Data Source=app_data\database.mdb;Persist Security Info=False;

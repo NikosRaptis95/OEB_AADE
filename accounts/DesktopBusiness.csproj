@@ -1,0 +1,709 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F08C07EF-8D2A-4A97-B32C-EBB01753CC16}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesktopBusiness</RootNamespace>
+    <AssemblyName>DesktopBPR</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <UseWinFormsOutOfProcDesigner>True</UseWinFormsOutOfProcDesigner>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseWinFormsOutOfProcDesigner>True</UseWinFormsOutOfProcDesigner>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DesktopBusiness.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.OWC11, Version=11.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GMap.NET.Core, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL" />
+    <Reference Include="HTMLEditorControl, Version=1.0.6554.17358, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\HTMLEditorControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Owc11, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\templates\bin\Debug\Microsoft.Office.Interop.Owc11.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>..\templates\bin\Debug\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Syncfusion.Edit.Windows, Version=17.3460.0.14, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Grid.Base, Version=17.3460.0.14, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Grid.Windows, Version=17.3460.0.14, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Shared.Base, Version=17.3460.0.14, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Shared.Windows, Version=17.3460.0.14, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Tools.Base, Version=17.3460.0.14, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Tools.Windows, Version=17.3460.0.14, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CallForms\CAll AADEFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallForms\CAll AADEFrm.Designer.cs">
+      <DependentUpon>CAll AADEFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CallForms\CallAFMKIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallForms\CallAFMKIN.Designer.cs">
+      <DependentUpon>CallAFMKIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CallForms\CallAFM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallForms\CallAFM.Designer.cs">
+      <DependentUpon>CallAFM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CallForms\CallErgFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallForms\CallErgFrm.Designer.cs">
+      <DependentUpon>CallErgFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CallForms\CallKAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallForms\CallKAE.Designer.cs">
+      <DependentUpon>CallKAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CallForms\CallKErFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallForms\CallKErFrm.Designer.cs">
+      <DependentUpon>CallKErFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CallForms\CallKinKartFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallForms\CallKinListFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallForms\CallMtlFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallForms\CallMtlFrm_WinPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallForms\CallMtlFrm_WinPlan.Designer.cs">
+      <DependentUpon>CallMtlFrm_WinPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CallForms\CallPinFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CallForms\CallSynFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iForms\copyKin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iForms\copyKin.Designer.cs">
+      <DependentUpon>copyKin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\frmAADEFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\frmAADEFrm.Designer.cs">
+      <DependentUpon>frmAADEFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\frmAFMKIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\frmAFMKIN.Designer.cs">
+      <DependentUpon>frmAFMKIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\frmAFM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\frmAFM.Designer.cs">
+      <DependentUpon>frmAFM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\frmKAEFl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\frmKAEFl.Designer.cs">
+      <DependentUpon>frmKAEFl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\frmTimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\frmTimi.Designer.cs">
+      <DependentUpon>frmTimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\koki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\koki.Designer.cs">
+      <DependentUpon>koki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\ParamEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\ParamEditor.Designer.cs">
+      <DependentUpon>ParamEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\qsynt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\qsynt.Designer.cs">
+      <DependentUpon>qsynt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\reportKost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\reportKost.Designer.cs">
+      <DependentUpon>reportKost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\xmlEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\xmlEditor.Designer.cs">
+      <DependentUpon>xmlEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <None Include="bin\Debug\Documents\Kede_Delete_Amount_Service_K_v_0.99.pdf" />
+    <None Include="bin\Debug\Documents\Kede_Progress_Service_K_v_1.01.pdf" />
+    <None Include="bin\Debug\Documents\Kede_Progress_Service_K_v_1.02.pdf" />
+    <None Include="bin\Debug\Documents\KED_client_specs_v1.5_0.pdf" />
+    <None Include="bin\Debug\Documents\manual_EDA_v4.pdf" />
+    <None Include="bin\Debug\Params\level.param" />
+    <None Include="bin\Debug\Params\password.param" />
+    <None Include="bin\Debug\Params\SynFPA0.param" />
+    <None Include="bin\Debug\Params\KAElist0.param" />
+    <None Include="bin\Debug\Params\TABLE0.param" />
+    <None Include="bin\Debug\Params\AFMlist0.param" />
+    <None Include="bin\Debug\Params\Templates\AFMlist.param" />
+    <None Include="bin\Debug\Params\Templates\auditRecord.param" />
+    <None Include="bin\Debug\Params\Templates\KAElist.param" />
+    <None Include="bin\Debug\Params\Templates\level.param" />
+    <None Include="bin\Debug\Params\Templates\password.param" />
+    <None Include="bin\Debug\Params\Templates\retrieveKedeAmountInputRecord.param" />
+    <None Include="bin\Debug\Params\Templates\retrieveKedeAmountRequest.param" />
+    <None Include="bin\Debug\Params\Templates\SynFPA.param" />
+    <None Include="bin\Debug\Params\Templates\TABLE.param" />
+    <None Include="bin\Debug\Params\Templates\typeapp.param" />
+    <None Include="bin\Debug\Params\Templates\username.param" />
+    <None Include="bin\Debug\Params\username.param" />
+    <None Include="customization\code\frmDocs_Demo.cs" />
+    <None Include="customization\code\frmSynFl_Customers_Symoglou.cs" />
+    <Compile Include="iForms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iForms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iForms\frmMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iForms\frmMap.Designer.cs">
+      <DependentUpon>frmMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iForms\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iForms\InputBox.Designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\frmErgFl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\frmErgFl.Designer.cs">
+      <DependentUpon>frmErgFl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\frmErgRel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\frmErgRel.Designer.cs">
+      <DependentUpon>frmErgRel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\frmKErFl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\frmKErFl.Designer.cs">
+      <DependentUpon>frmKErFl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\frmOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\frmOptions.Designer.cs">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iForms\frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iForms\frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\frmDocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\frmDocs.Designer.cs">
+      <DependentUpon>frmDocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\frmMtlFl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\frmMtlFl.Designer.cs">
+      <DependentUpon>frmMtlFl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\frmSynFl.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\frmSynFl.Designer.cs">
+      <DependentUpon>frmSynFl.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="reportForms\CategoryKoKiFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportForms\CategoryKoKiFrm.Designer.cs">
+      <DependentUpon>CategoryKoKiFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportForms\genView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportForms\genView.Designer.cs">
+      <DependentUpon>genView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportForms\ksynRepFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportForms\ksynRepFrm.Designer.cs">
+      <DependentUpon>ksynRepFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\frmKinFl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\frmKinFl.Designer.cs">
+      <DependentUpon>frmKinFl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MForms\frmPinFl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MForms\frmPinFl.Designer.cs">
+      <DependentUpon>frmPinFl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reportForms\ReportErga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportForms\ReportErga.Designer.cs">
+      <DependentUpon>ReportErga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports\reports.cs">
+      <DependentUpon>reports.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="reports\reports.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reports.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="reports\repFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reports\repFiltro.Designer.cs">
+      <DependentUpon>repFiltro.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CallForms\CAll AADEFrm.resx">
+      <DependentUpon>CAll AADEFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CallForms\CallAFM.resx">
+      <DependentUpon>CallAFM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CallForms\CallKErFrm.resx">
+      <DependentUpon>CallKErFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CallForms\CallKinKartFrm.resx">
+      <DependentUpon>CallKinKartFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CallForms\CallKinListFrm.resx">
+      <DependentUpon>CallKinListFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CallForms\CallSynFrm.resx">
+      <DependentUpon>CallSynFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iForms\copyKin.resx">
+      <DependentUpon>copyKin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iForms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iForms\frmMap.resx">
+      <DependentUpon>frmMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iForms\InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\frmAADEFrm.resx">
+      <DependentUpon>frmAADEFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\frmAFMKIN.resx">
+      <DependentUpon>frmAFMKIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\frmAFM.resx">
+      <DependentUpon>frmAFM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\frmErgFl.resx">
+      <DependentUpon>frmErgFl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\frmErgRel.resx">
+      <DependentUpon>frmErgRel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\frmKAEFl.resx">
+      <DependentUpon>frmKAEFl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\frmKErFl.resx">
+      <DependentUpon>frmKErFl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\frmOptions.resx">
+      <DependentUpon>frmOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iForms\frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\frmDocs.resx">
+      <DependentUpon>frmDocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\frmMtlFl.resx">
+      <DependentUpon>frmMtlFl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\frmSynFl.resx">
+      <DependentUpon>frmSynFl.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\frmTimi.resx">
+      <DependentUpon>frmTimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\koki.resx">
+      <DependentUpon>koki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\ParamEditor.resx">
+      <DependentUpon>ParamEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\qsynt.resx">
+      <DependentUpon>qsynt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\reportKost.resx">
+      <DependentUpon>reportKost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\xmlEditor.resx">
+      <DependentUpon>xmlEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportForms\CategoryKoKiFrm.resx">
+      <DependentUpon>CategoryKoKiFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportForms\genView.resx">
+      <DependentUpon>genView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportForms\ksynRepFrm.resx">
+      <DependentUpon>ksynRepFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\frmKinFl.resx">
+      <DependentUpon>frmKinFl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MForms\frmPinFl.resx">
+      <DependentUpon>frmPinFl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reportForms\ReportErga.resx">
+      <DependentUpon>ReportErga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\rdlc\hmeReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\rdlc\kartReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\rdlc\KinReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\rdlc\ApoKinFl.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\repFiltro.resx">
+      <DependentUpon>repFiltro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\rdlc\isοReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="customization\code\CallMtlFrm_demo.cs" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="reports\reports.xsc">
+      <DependentUpon>reports.xsd</DependentUpon>
+    </None>
+    <None Include="reports\reports.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>reports.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="reports\reports.xss">
+      <DependentUpon>reports.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app_data\checkDatabase\Basket_Tables.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\checkDatabase\ErgRel_Tables.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\checkDatabase\FilPin_Tables.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="app_data\checkDatabase\GeotexnikiSynFl_Custom.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\checkDatabase\KinFlQry_Views.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="app_data\checkDatabase\ErgFl_Tables.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\checkDatabase\KErFl_Tables.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\checkDatabase\KinFl_Tables.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="app_data\checkDatabase\SynFl_Tables.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\connectionstring_forRW.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\connectionstrings\Geotexniki_Cloud.txt" />
+    <Content Include="app_data\connectionstrings\SQLServer_Cloud.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\connectionstring.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\connectionstring_cloud.txt" />
+    <Content Include="app_data\connectionstrings\MSAccessOLEDB32.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\connectionstrings\MSAccessODBC.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\connectionstrings\MSAccessOLEDB64.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\connectionstrings\SQLServer.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\connectionstrings\CompactSQLServer35.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\connectionstring_WinPlan.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="app_data\databaseTest.mdb" />
+    <Content Include="app_data\database.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="bin\Debug\Params\auditRecord0.param" />
+    <None Include="bin\Debug\Params\retrieveKedeAmountInputRecord0.param" />
+    <None Include="bin\Debug\Params\retrieveKedeAmountRequest0.param" />
+    <None Include="bin\Debug\Params\typeapp.param" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="customization\code\CallSynFrm_Customers_Simoglou.cs" />
+    <Content Include="app_data\KinFlQry_MSAccess.txt" />
+    <Content Include="app_data\KinFlQry_SQLServer.txt" />
+    <Content Include="app_data\connectionstring_MsAccess.txt" />
+    <Content Include="AxInterop.SHDocVw.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GMap.NET.Core.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GMap.NET.WindowsForms.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HTMLEditorControl.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\mega.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\null.jpg" />
+    <Content Include="Interop.SHDocVw.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\accountsClassLibrary\accountsClassLibrary.vbproj">
+      <Project>{c77abcec-5f53-4fe0-a458-c2c2d351d965}</Project>
+      <Name>accountsClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\accountsClassLibrary_Custom\accountsClassLibrary_Custom.csproj">
+      <Project>{278c6fd4-fbb3-4002-9b78-a4cf047d2830}</Project>
+      <Name>accountsClassLibrary_Custom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\alphaFrameWork\alphaFrameWork.vbproj">
+      <Project>{a59b6d02-2b5c-47ad-b786-9b5097b3c0e0}</Project>
+      <Name>alphaFrameWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bhtaFramework\bhtaFramework\bhtaFramework.csproj">
+      <Project>{8465032b-2e56-42b4-b7f7-a582098e5762}</Project>
+      <Name>bhtaFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataGridViewAutoFilter\DataGridViewAutoFilter.csproj">
+      <Project>{5A4B4B14-D3B5-4D54-80EC-0877C1E6E73A}</Project>
+      <Name>DataGridViewAutoFilter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\templates\templates.csproj">
+      <Project>{02022d40-9c0e-4ada-a5bc-373258ba208a}</Project>
+      <Name>templates</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="customization\control\" />
+    <Folder Include="customization\dlls\" />
+    <Folder Include="customization\interface\" />
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

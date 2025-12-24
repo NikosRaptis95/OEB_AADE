@@ -1,0 +1,3 @@
+﻿SQLServer
+SQLCLIENT
+server=olympos;Initial Catalog=OEB_AADE.net;uid=sa;pwd=63427638;

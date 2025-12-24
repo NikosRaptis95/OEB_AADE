@@ -1,0 +1,1 @@
+C:\Users\lefte\Google Drive\development\Windows Desktop\Congress\Congress\bin\Debug;C:\Users\lefte\Google Drive\development\Windows Desktop\Congress\Congress\bin\Debug\updates;congress.exe

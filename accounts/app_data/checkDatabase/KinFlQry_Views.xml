@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Views>
+  <View>
+    <Name>KinFlQry</Name>
+    <SQL>
+      SELECT        AitiKin, Cash, id, IdSyn, KoKiKin, Memo, RegistryDate, Seira, Status, Summary, SalesPerson
+      FROM          KinFl
+      UNION ALL
+      (SELECT        AitiKin, Cash, id, IdSyn, SUBSTRING(KinFl.KoKiKin, 1, 1) + CAST(CAST(SUBSTRING(KinFl.KoKiKin, 2, 1) AS int) - 1 AS VARCHAR) AS KoKiKin, Memo, RegistryDate, Seira, Status, Summary, SalesPerson
+      FROM            KinFl
+      WHERE        KinFl.Cash = '1' AND KinFl.KoKiKin &lt;&gt; '00' AND KinFl.KoKiKin &lt;&gt; '02' AND KinFl.KoKiKin &lt;&gt; '10' AND KinFl.KoKiKin &lt;&gt; '12')
+    </SQL>
+    <DatabaseType>SQLServer</DatabaseType>
+  </View>
+  <!--Κινήσεις για εκτυπώσεις-->
+  <View>
+    <Name>KinFlQry</Name>
+    <SQL>
+      SELECT KinFl.AitiKin, KinFl.Cash, KinFl.id, KinFl.IdSyn, KinFl.KoKiKin, KinFl.Memo, KinFl.RegistryDate, KinFl.Seira, KinFl.Status, KinFl.Summary, KinFl.SalesPerson
+      FROM KinFl
+      UNION ALL SELECT KinFl.AitiKin, KinFl.Cash, KinFl.id, KinFl.IdSyn, Mid(KinFl.KoKiKin,1,1) + Cstr(Val(Mid(KinFl.KoKiKin,2,1))-1) AS KoKiKin, KinFl.Memo, KinFl.RegistryDate, KinFl.Seira, KinFl.Status, KinFl.Summary, KinFl.SalesPerson
+      FROM KinFl
+      WHERE Cash = "1" And KinFl.KoKiKin &lt;&gt; "00" And KinFl.KoKiKin &lt;&gt; "02" And KinFl.KoKiKin &lt;&gt; "10" And KinFl.KoKiKin &lt;&gt; "12"
+    </SQL>
+    <DatabaseType>MsAccess_DoesNotSupported</DatabaseType>
+  </View>
+  <!--Κινήσεις για εκτυπώσεις-->
+</Views>

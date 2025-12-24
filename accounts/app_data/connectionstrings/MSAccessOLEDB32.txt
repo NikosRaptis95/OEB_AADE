@@ -1,0 +1,3 @@
+﻿MS Access OLEDB 32
+OLEDB
+Provider=Microsoft.Jet.OLEDB.4.0;Data Source=app_data\database.mdb;Persist Security Info=True;

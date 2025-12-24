@@ -1,0 +1,3 @@
+﻿SQLServer
+SQLCLIENT
+server=161.97.173.47;Initial Catalog=WinPlan_ArmyLook;uid=l1usr;pwd=41accb27-3922-48b3-869a-69b3d2b8bba6;

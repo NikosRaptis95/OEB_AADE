@@ -1,0 +1,3 @@
+﻿MS Access ODBC
+ODBC
+Dsn=MS Access Database;dbq=app_data\database.mdb;defaultdir=app_data;driverid=25;fil=MS Access;maxbuffersize=2048;pagetimeout=5;uid=admin
